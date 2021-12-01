@@ -1,0 +1,37 @@
+Dependencies for Project 'tinyrtos', Target 'STM32F103RC': (DO NOT MODIFY !)
+F (.\USER\main.c)(0x61A7309C)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER -I .\OS -I .\CMSIS-I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (USER\led.h)(0x61A5D4C9)
+I (.\CMSIS\stm32f10x.h)(0x4D783CB4)
+I (.\CMSIS\core_cm3.h)(0x4D523B58)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (.\CMSIS\system_stm32f10x.h)(0x4D783CAA)
+I (.\OS\os.h)(0x61A6EBE6)
+I (.\OS\task.h)(0x61A70D9A)
+F (.\USER\led.c)(0x61A5CCC0)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER -I .\OS -I .\CMSIS-I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (USER\led.h)(0x61A5D4C9)
+I (.\CMSIS\stm32f10x.h)(0x4D783CB4)
+I (.\CMSIS\core_cm3.h)(0x4D523B58)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (.\CMSIS\system_stm32f10x.h)(0x4D783CAA)
+F (.\OS\task.c)(0x61A70E1C)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER -I .\OS -I .\CMSIS-I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD-o .\objects\task.o --omf_browse .\objects\task.crf --depend .\objects\task.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (OS\os.h)(0x61A6EBE6)
+I (.\CMSIS\stm32f10x.h)(0x4D783CB4)
+I (.\CMSIS\core_cm3.h)(0x4D523B58)
+I (.\CMSIS\system_stm32f10x.h)(0x4D783CAA)
+I (OS\task.h)(0x61A70D9A)
+F (.\OS\task.s)(0x61A7231E)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "STM32F10X_HD SETA 1"--list .\listings\task.lst --xref -o .\objects\task_1.o --depend .\objects\task_1.d)
+F (.\OS\os.c)(0x61A6EBE7)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER -I .\OS -I .\CMSIS-I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD-o .\objects\os.o --omf_browse .\objects\os.crf --depend .\objects\os.d)
+I (.\CMSIS\stm32f10x.h)(0x4D783CB4)
+I (.\CMSIS\core_cm3.h)(0x4D523B58)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (.\CMSIS\system_stm32f10x.h)(0x4D783CAA)
+I (OS\task.h)(0x61A70D9A)
+F (.\STARTUP\startup_stm32f10x_hd.s)(0x4D783CDE)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "STM32F10X_HD SETA 1"--list .\listings\startup_stm32f10x_hd.lst --xref -o .\objects\startup_stm32f10x_hd.o --depend .\objects\startup_stm32f10x_hd.d)
+F (.\CMSIS\core_cm3.c)(0x4C0C587E)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER -I .\OS -I .\CMSIS-I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD-o .\objects\core_cm3.o --omf_browse .\objects\core_cm3.crf --depend .\objects\core_cm3.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+F (.\CMSIS\system_stm32f10x.c)(0x4D783CB0)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\USER -I .\OS -I .\CMSIS-I.\RTE\_STM32F103RC-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
+I (CMSIS\stm32f10x.h)(0x4D783CB4)
+I (CMSIS\core_cm3.h)(0x4D523B58)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (CMSIS\system_stm32f10x.h)(0x4D783CAA)

@@ -1,0 +1,136 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 IMPORT           current_TCB
+    2 00000000                 IMPORT           switch_current_TCB
+    3 00000000         
+    4 00000000                 PRESERVE8
+    5 00000000         
+    6 00000000                 AREA             CODE, CODE, READONLY
+    7 00000000         
+    8 00000000         PendSV_Handler
+                               PROC
+    9 00000000                 EXPORT           PendSV_Handler
+   10 00000000         
+   11 00000000         ; turn off all interrupt
+   12 00000000 B672            CPSID            I
+   13 00000002         
+   14 00000002         ; check PSP, if PSP == 0, this is the task first switch
+   15 00000002         ; so we can skip 'save context' and 'select next TCB' st
+                       ep
+   16 00000002 F3EF 8009       MRS              R0, PSP
+   17 00000006         ; if r0 = 0, jump to restore_context
+   18 00000006 B158            CBZ              R0, restore_context
+   19 00000008         
+   20 00000008         save_context
+   21 00000008 F3EF 8009       MRS              R0, PSP
+   22 0000000C E920 0FF0       STMDB            R0!, {R4-R11}
+   23 00000010 4909            LDR              R1, =current_TCB
+   24 00000012 6809            LDR              R1, [R1]
+   25 00000014 6808            LDR              R0, [R1]
+   26 00000016         
+   27 00000016         select_next_TCB
+   28 00000016 B500            PUSH             {LR}
+   29 00000018 F7FF FFFE       BL               switch_current_TCB
+   30 0000001C F85D EB04       POP              {LR}
+   31 00000020         
+   32 00000020         restore_context
+   33 00000020 4805            LDR              R0, =current_TCB
+   34 00000022 6800            LDR              R0, [R0]
+   35 00000024 6800            LDR              R0, [R0]
+   36 00000026 E8B0 0FF0       LDMIA            R0!, {R4-R11}
+   37 0000002A F380 8809       MSR              PSP, R0
+   38 0000002E F04E 0E04       ORR              LR, LR, #0x4 ; R1 |= 0x04
+   39 00000032         
+   40 00000032         ; turn on all interrupt
+   41 00000032 B662            CPSIE            I
+   42 00000034         
+   43 00000034         ; return
+   44 00000034 4770            BX               LR
+   45 00000036         
+   46 00000036                 ENDP
+   47 00000036         
+   48 00000036 BF00            NOP
+   49 00000038         
+   50 00000038                 END
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\task_1.d -o.\objects\task_1.o -I.\RTE\_STM32F103RC -IC:\
+Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include -IC:\Keil_v5\ARM\CMSIS
+\Include --predefine="__UVISION_VERSION SETA 526" --predefine="STM32F10X_HD SET
+A 1" --list=.\listings\task.lst OS\task.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+CODE 00000000
+
+Symbol: CODE
+   Definitions
+      At line 6 in file OS\task.s
+   Uses
+      None
+Comment: CODE unused
+PendSV_Handler 00000000
+
+Symbol: PendSV_Handler
+   Definitions
+      At line 8 in file OS\task.s
+   Uses
+      At line 9 in file OS\task.s
+Comment: PendSV_Handler used once
+restore_context 00000020
+
+Symbol: restore_context
+   Definitions
+      At line 32 in file OS\task.s
+   Uses
+      At line 18 in file OS\task.s
+Comment: restore_context used once
+save_context 00000008
+
+Symbol: save_context
+   Definitions
+      At line 20 in file OS\task.s
+   Uses
+      None
+Comment: save_context unused
+select_next_TCB 00000016
+
+Symbol: select_next_TCB
+   Definitions
+      At line 27 in file OS\task.s
+   Uses
+      None
+Comment: select_next_TCB unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+current_TCB 00000000
+
+Symbol: current_TCB
+   Definitions
+      At line 1 in file OS\task.s
+   Uses
+      At line 23 in file OS\task.s
+      At line 33 in file OS\task.s
+
+switch_current_TCB 00000000
+
+Symbol: switch_current_TCB
+   Definitions
+      At line 2 in file OS\task.s
+   Uses
+      At line 29 in file OS\task.s
+Comment: switch_current_TCB used once
+2 symbols
+341 symbols in table
