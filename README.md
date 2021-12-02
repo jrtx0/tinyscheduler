@@ -1,2 +1,2 @@
 # tinyrtos
-tinyrtos only focus on scheduler
+tinyrtos only focus on scheduler implementation
