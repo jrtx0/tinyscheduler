@@ -1,2 +1,2 @@
-# tinyrtos
-tinyrtos only focus on scheduler implementation
+# tinyscheduler
+tinyscheduler based on stm32
